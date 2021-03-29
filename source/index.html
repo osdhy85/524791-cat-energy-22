@@ -1,12 +1,179 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
 
-  </body>
+<body class="page-body">
+  <header class="page-header">
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__container">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item logo-container">
+            <ul class="logo-container__list">
+              <li class="logo-container__item">
+                <a class="logo-container__link" aria-label="Логотип интернет-магазина Кэт энерджи—главная"></a>
+              </li>
+              <li class="logo-container__item">
+                <a class="logo-container__link" aria-label="Логотип интернет-магазина Кэт энерджи—главная"></a>
+              </li>
+            </ul>
+          </li>
+          <li class="site-list__item site-list__item--current">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Кэт энерджи — Функциональное питание для котов</h1>
+    <section class="promo">
+      <div class="promo__container">
+        <button class="promo__button" type="button">Подобрать программу</button>
+        <div class="promo__text">
+          <h2>Функциональное питание для котов</h2>
+          <p>Занялся собой? Займись котом!</p>
+        </div>
+      </div>
+    </section>
+    <div class="catalog-category">
+      <section class="catalog-category__diet">
+        <div class="catalog-category__content">
+          <h3>Похудение</h3>
+          <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+            поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="catalog-category__link" href="#">Каталог slim</a>
+        </div>
+      </section>
+      <section class="catalog-category__power">
+        <div class="catalog-category__content">
+          <h3>Набор массы</h3>
+          <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+            необходимые мышцы!</p>
+          <a class="catalog-category__link" href="#">Каталог pro</a>
+        </div>
+      </section>
+    </div>
+    <section class="benefits">
+      <div class="benefits__container">
+        <h2 class="benefits__title">Как это работает</h2>
+        <ul class="benefits__list">
+          <li class="benefits__item benefits__item--natural">
+            <p>Функциональное питание содержит только полезные питательные вещества.</p>
+          </li>
+          <li class="benefits__item benefits__item--disolve">
+            <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          </li>
+          <li class="benefits__item benefits__item--meal">
+            <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
+          </li>
+          <li class="benefits__item benefits__item--period">
+            <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="demo">
+      <div class="demo__container">
+        <h2>Живой пример</h2>
+        <div class="demo__description">
+          <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+          <table class="description-table">
+            <thead>
+              <tr>
+                <th class="description-table__text description-table__text--lead">5 кг</th>
+                <th class="description-table__text description-table__text--lead">60 дней</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="description-table__text">Снижение веса</td>
+                <td class="description-table__text">Затрачено времени</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="demo__img-comparison">
+          <div class="img-container">
+            <img src="img/content/cat-fat.png" width="677" height="520" alt="Толстый надменный кот">
+            <img src="img/content/cat-skinny.png" width="545" height="520" alt="Худой отрешённый кот">
+          </div>
+          <div class="slider-container">
+            <ul class="slider-container__slider-list">
+              <li class="slider-container__slider-item">Было</li>
+              <li class="slider-container__slider-item">
+                <div class="scale">
+                  <div class="scale__bar" style="width: 63%; margin: 0 0 0 0;"></div>
+                </div>
+              </li>
+              <li class="slider-container__slider-item">Стало</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="location">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <div class="location__container">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533198!2d30.32085871661751!3d59.93871648187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1617013992763!5m2!1sru!2sby"
+        width="100%" height="400" allowfullscreen loading="lazy" title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe> -->
+        <div class="location__contacts">
+          <table class="location-table">
+            <tr>
+              <td class="location-table__title">Приглашаем к&nbsp;сотрудничеству дилеров!</td>
+              <td class="location-table__text">
+                <p>ул. Большая Конюшенная, д. 19/8</p>
+                <p>Санкт-Петербург</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <div class="footer__container">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link footer__link--energy-logo" aria-label="Логотип интернет-магазина Кэт энерджи"></a>
+          </li>
+          <li class="footer__item social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://htmlacademy.ru/intensive/adaptive"
+                  title="Вконтакте"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://htmlacademy.ru/intensive/adaptive"
+                  title="Инстаграм"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://htmlacademy.ru/intensive/adaptive"
+                  title="Фейсбук"></a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link footer__link--academy-logo" href="https://htmlacademy.ru/intensive/adaptive"
+              title="Интерактивные курсы Html Academy" aria-label="Интерактивные курсы Html Academy"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
