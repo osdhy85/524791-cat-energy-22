@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -34,8 +35,8 @@
         <div class="promo__text">
           <h1>Функциональное питание для котов</h1>
           <p>Занялся собой? Займись котом!</p>
-          <a class="promo__link" href="form.html">Подобрать программу</a>
         </div>
+        <a class="promo__link" href="form.html">Подобрать программу</a>
       </div>
     </section>
     <section class="catalog-category">
@@ -44,7 +45,8 @@
           <li class="catalog-category__item catalog-category__item--diet">
             <div class="catalog-category__content">
               <h3>Похудение</h3>
-              <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim
+              <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy
+                Slim
                 поможет вашему питомцу сбросить лишний вес.</p>
               <a class="catalog-category__link" href="#">Каталог slim</a>
             </div>
@@ -52,7 +54,8 @@
           <li class="catalog-category__item catalog-category__item--power">
             <div class="catalog-category__content">
               <h3>Набор массы</h3>
-              <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить
+              <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту
+                нарастить
                 необходимые мышцы!</p>
               <a class="catalog-category__link" href="#">Каталог pro</a>
             </div>
@@ -62,7 +65,7 @@
     </section>
     <section class="benefits">
       <div class="benefits__container">
-        <h2 class="benefits__title">Как это работает</h2>
+        <h2>Как это работает</h2>
         <ul class="benefits__list">
           <li class="benefits__item benefits__item--natural">
             <p>Функциональное питание содержит только полезные питательные вещества.</p>
@@ -82,35 +85,38 @@
     <section class="demo">
       <div class="demo__container">
         <h2>Живой пример</h2>
-        <div class="demo__description">
+        <div class="demo__content">
           <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <table class="description-table">
-            <thead>
-              <tr>
-                <th class="description-table__text description-table__text--lead">5 кг</th>
-                <th class="description-table__text description-table__text--lead">60 дней</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="description-table__text">Снижение веса</td>
-                <td class="description-table__text">Затрачено времени</td>
-              </tr>
-            </tbody>
-          </table>
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="description-table">
+            <table class="description-table">
+              <thead>
+                <tr>
+                  <th class="description-table__text description-table__text--lead">5 кг</th>
+                  <th class="description-table__text description-table__text--lead">60 дней</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="description-table__text">Снижение веса</td>
+                  <td class="description-table__text">Затрачено времени</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Затраты на питание: 15 000 РУБ.</p>
+          </div>
         </div>
         <div class="demo__img-comparison">
           <div class="img-container">
-            <img src="img/content/cat-fat.png" width="677" height="520" alt="Толстый надменный кот">
-            <img src="img/content/cat-skinny.png" width="545" height="520" alt="Худой отрешённый кот">
+            <img src="img/content/cat-fat@1x.png" width="311" height="239" alt="Толстый надменный кот">
+            <img src="img/content/cat-skinny@1x.png" width="251" height="240" alt="Худой отрешённый кот">
           </div>
           <div class="slider-container">
             <div class="slider">
               <button class="slider__button" type="button">Было</button>
-                <div class="scale">
-                  <div class="scale__bar" style="width: 63%; margin: 0 0 0 0;"></div>
-                </div>
+              <div class="scale">
+                <div class="scale__bar" style="width: 63%; margin: 0 0 0 0;"></div>
+              </div>
               <button class="slider__button" type="button">Стало</button>
             </div>
           </div>
@@ -120,8 +126,10 @@
     <section class="location">
       <h2 class="visually-hidden">Офис нашей компании на карте</h2>
       <div class="location__container">
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533198!2d30.32085871661751!3d59.93871648187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1617013992763!5m2!1sru!2sby"
-        width="100%" height="400" allowfullscreen loading="lazy" title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe> -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533198!2d30.32085871661751!3d59.93871648187627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1617013992763!5m2!1sru!2sby"
+          width="100%" height="362" allowfullscreen loading="lazy"
+          title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург"></iframe>
         <div class="location__contacts">
           <p class="location__title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <p class="location__text">ул. Большая Конюшенная, д. 19/8<br> Санкт-Петербург</p>
