@@ -1,0 +1,57 @@
+.cards__container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 280px;
+}
+
+.cards__list {
+  list-style: none;
+  padding: 0;
+}
+
+.card-content a {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.card-content h3,
+.extra-card__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @special-dark-grey-2;
+}
+
+.card-content__item dd,
+.card-content__item dt,
+.extra-card__subtitle {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: @special-dark-grey-1;
+}
+
+.card-link {
+  display: block;
+  width: 280px;
+  padding: 10px 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: @basic-white;
+  background-color: @basic-green;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &--extra-card {
+    color: @special-dark-grey-1;
+    background-color: @basic-grey;
+  }
+}
