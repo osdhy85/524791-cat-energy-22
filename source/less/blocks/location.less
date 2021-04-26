@@ -1,11 +1,3 @@
-.location__container {
-  background-color: @basic-white;
-
-  &--grey-fill {
-    background-color: @basic-grey;
-  }
-}
-
 .location__container iframe {
   display: block;
   border: none;
@@ -14,16 +6,22 @@
 }
 
 .location__contacts {
-  position: relative;
-  left: 0;
-  bottom: 0;
   margin: 0 auto;
   width: 280px;
-  padding: 0 20px;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: @basic-white;
+
+  &--grey-fill {
+    background-color: @basic-grey;
+  }
 }
 
 .location__title {
   margin: 0;
+  max-width: 140px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -34,9 +32,88 @@
 
 .location__text {
   margin: 0;
+  max-width: 140px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: @special-dark-grey-1;
+}
+
+@media (min-width: @tablet-width) {
+  .location__contacts {
+    margin: 0 auto;
+    width: 708px;
+    padding: 50px 30px 50px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    background-color: @basic-white;
+
+    &--grey-fill {
+      background-color: @basic-grey;
+    }
+  }
+
+  .location__title {
+    max-width: 170px;
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .location__text {
+    max-width: 170px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .location__text span {
+    display: inline-block;
+    margin: 5px 0 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .location__container {
+    position: relative;
+  }
+
+  .location__contacts {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 175px;
+
+    max-width: 405px;
+    padding: 50px 90px 50px 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    background-color: @basic-white;
+
+    &--grey-fill {
+      background-color: @basic-grey;
+    }
+  }
+
+  .location__title {
+    max-width: 170px;
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .location__text {
+    max-width: 170px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  .location__text span {
+    display: inline-block;
+    margin: 5px 0 0 0;
+  }
 }

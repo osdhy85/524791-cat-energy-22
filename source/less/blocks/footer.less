@@ -5,27 +5,38 @@
 .footer__container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 280px;
+  width: 280px;
 }
 
 .footer__list {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0 35px 0;
   margin: 0;
   list-style: none;
+}
+
+.social {
+  padding: 20px 0;
+  margin: 0 0 15px 0;
+  border-top: 1px solid @special-grey-1;
+  border-bottom: 1px solid @special-grey-1;
 }
 
 .social__list {
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 130px;
   list-style: none;
 }
 
-.social__link,
 .footer__link {
   display: block;
-}
-
-.footer__link {
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -34,6 +45,9 @@
 }
 
 .footer__link--energy-logo {
+  display: block;
+  margin: 0 auto 25px auto;
+  text-align: center;
   height: 24px;
   width: 128px;
   background-image: url("../../img/logos/text-logo-footer.svg");
@@ -42,6 +56,7 @@
 }
 
 .social__link--vkontakte {
+  display: block;
   height: 23px;
   width: 23px;
   background-image: url("../../img/decorative/footer-icon-vkontakte.svg");
@@ -50,6 +65,7 @@
 }
 
 .social__link--instagram {
+  display: block;
   height: 23px;
   width: 23px;
   background-image: url("../../img/decorative/footer-icon-instagram.svg");
@@ -58,9 +74,99 @@
 }
 
 .social__link--facebook {
+  display: block;
   height: 23px;
   width: 23px;
   background-image: url("../../img/decorative/footer-icon-facebook.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+a.footer__link--academy-logo {
+  position: relative;
+}
+
+.footer__link--academy-logo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 252px;
+  width: 28px;
+  height: 35px;
+  background-image: url("../../img/logos/htmlacademy-logo-footer.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .footer__container {
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 708px;
+  }
+
+  .footer__list {
+    margin: 0;
+    padding: 0;
+    min-height: 150px;
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .social__list {
+    width: 130px;
+  }
+
+  .footer__link--energy-logo {
+    margin: 0;
+  }
+
+  .social__link--vkontakte {
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+  }
+
+  .social__link--instagram {
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+  }
+
+  .social__link--facebook {
+    height: 30px;
+    width: 30px;
+    background-size: 30px 30px;
+  }
+
+  a.footer__link--academy-logo {
+    margin: 0 44px 0 0;
+  }
+
+  .footer__link--academy-logo::after {
+    top: -8px;
+    left: 130px;
+    width: 28px;
+    height: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__container {
+    margin: 0 auto;
+    padding: 0 110px;
+    width: 1220px;
+  }
 }
