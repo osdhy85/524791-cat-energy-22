@@ -21,3 +21,41 @@
   text-transform: uppercase;
   color: @basic-black;
 }
+
+@media (min-width: @tablet-width) {
+  .form-title__container {
+    max-width: 666px;
+    padding: 0 30px 0 70px;
+  }
+
+  .form-title__container h1 {
+    margin: 0 0 50px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .form-title__container p {
+    max-width: 324px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-title__container {
+    max-width: 1220px;
+    padding: 0 110px;
+  }
+
+  .form-title__container h1 {
+    margin: 0 0 50px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .form-title__container p {
+    max-width: 324px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

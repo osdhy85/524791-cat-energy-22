@@ -2,8 +2,80 @@
   background-color: @basic-white;
 }
 
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  display: block;
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  z-index: 1;
+  width: 24px;
+  height: 18px;
+
+  border: 0;
+  padding: 0;
+  outline: none;
+  background-color: @basic-white;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: @basic-white;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @basic-black;
+  box-shadow: 0 8px 0 0 @basic-black, 0 16px 0 0 @basic-black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@special-grey-1, 30%);
+  box-shadow: 0 8px 0 0 fade(@special-grey-1, 30%), 0 16px 0 0 fade(@special-grey-1, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 34px;
+  left: auto;
+  right: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @basic-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@basic-black, 30%);
+  }
+}
+
 .main-nav__container {
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   min-width: 280px;
   padding: 0;
 
@@ -13,7 +85,7 @@
 }
 
 .main-nav__logo-link {
-  margin: 15px auto 20px auto;
+  margin: 15px 0 20px 20px;
   display: block;
   width: 190px;
   height: 38px;
@@ -44,6 +116,10 @@
   padding: 0;
   list-style: none;
   text-align: center;
+
+  &--bb {
+    border-bottom: 1px solid @special-grey-2;
+  }
 }
 
 .site-list__item {
@@ -74,13 +150,6 @@
   color: @basic-black;
 }
 
-.main-nav__toggle {
-  border: 0;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 @media (min-width: @tablet-width) {
   .main-nav__container {
     display: flex;
@@ -98,6 +167,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
+
+    &--bb {
+      border: none;
+    }
   }
 
   .site-list__item {
@@ -155,7 +228,7 @@
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
-    color: @basic-white;
+    color: @basic-black;
   }
 
   .main-nav__toggle {
