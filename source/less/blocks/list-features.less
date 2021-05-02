@@ -71,18 +71,6 @@
   box-sizing: border-box;
 }
 
-// .list-radio::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   height: 1px;
-//   margin: 0 -10000px;
-//   background-color: @special-grey-2;
-// }
-
 .list-radio label {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -208,6 +196,37 @@
     overflow: hidden;
   }
 
+  .list-addtional {
+    display: grid;
+    justify-content: start;
+    align-items: start;
+    column-gap: 123px;
+    grid-template-columns: repeat(2, 221px);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .list-addtional li:nth-child(1),
+  .list-addtional li:nth-child(2) {
+    margin: 0 0 30px 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .list-addtional li:nth-child(3),
+  .list-addtional li:nth-child(4) {
+    margin: 0 0 30px 0;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .form__button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 0 0 50px 0;
+  }
+
   .form-button {
     width: 282px;
     padding: 16px 20px;
@@ -215,6 +234,7 @@
   }
 
   .form-footnote {
+    margin: 0 0 0 80px;
     font-size: 16px;
     line-height: 16px;
   }
