@@ -218,3 +218,35 @@
     padding: 10px 20px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .cards__container {
+    margin: 0 auto;
+    padding: 0 110px;
+    width: 1220px;
+  }
+
+  .cards__item {
+    margin: 0 0 20px 0;
+    padding: 20px 0 20px 0;
+    grid-template-columns: 245px;
+  }
+
+  .cards__item img {
+    top: 10px;
+    left: 0;
+  }
+
+  .cards__list li:last-child {
+    width: 245px;
+  }
+
+  .card-content {
+    width: 168px;
+    margin: 0 auto 30px auto;
+  }
+
+  .card-link {
+    width: 168px;
+  }
+}
