@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -37,7 +38,7 @@
       <h2 class="visually-hidden">Товары функционального питания</h2>
       <div class="cards__container">
         <ul class="cards__list">
-          <li class="cards__item">
+          <li class="cards__item cards__item--grey-fill">
             <a href="#"><img src="img/content/pro500-chicken@1x.png" width="68" height="86"
                 alt="Cat Energy Pro 500 г — курица"></a>
             <div class="card-content">
@@ -58,10 +59,10 @@
                   <dd>700 р.</dd>
                 </div>
               </dl>
-              <a class="card-link">Заказать</a>
             </div>
+            <a class="card-link">Заказать</a>
           </li>
-          <li class="cards__item">
+          <li class="cards__item cards__item--grey-fill">
             <a href="#"><img src="img/content/pro1000-chicken@1x.png" width="84" height="100"
                 alt="Cat Energy Pro 1000 г — курица"></a>
             <div class="card-content">
@@ -82,10 +83,10 @@
                   <dd>1000 р.</dd>
                 </div>
               </dl>
-              <a class="card-link">Заказать</a>
             </div>
+            <a class="card-link">Заказать</a>
           </li>
-          <li class="cards__item">
+          <li class="cards__item cards__item--grey-fill">
             <a href="#"><img src="img/content/pro500-fish@1x.png" width="68" height="78"
                 alt="Cat Energy Pro 500 г — рыба"></a>
             <div class="card-content">
@@ -106,10 +107,10 @@
                   <dd>700 р.</dd>
                 </div>
               </dl>
-              <a class="card-link">Заказать</a>
             </div>
+            <a class="card-link">Заказать</a>
           </li>
-          <li class="cards__item">
+          <li class="cards__item cards__item--grey-fill">
             <a href="#"><img src="img/content/pro1000-fish@1x.png" width="84" height="101"
                 alt="Cat Energy Pro 1000 г — рыба"></a>
             <div class="card-content">
@@ -130,10 +131,10 @@
                   <dd>1000 р.</dd>
                 </div>
               </dl>
-              <a class="card-link">Заказать</a>
             </div>
+            <a class="card-link">Заказать</a>
           </li>
-          <li class="cards__item">
+          <li class="cards__item cards__item--grey-fill">
             <a href="#"><img src="img/content/pro500-buckwheat@1x.png" width="68" height="78"
                 alt="Cat Energy Slim 500 г — гречка"></a>
             <div class="card-content">
@@ -154,10 +155,10 @@
                   <dd>400 р.</dd>
                 </div>
               </dl>
-              <a class="card-link">Заказать</a>
             </div>
+            <a class="card-link">Заказать</a>
           </li>
-          <li class="cards__item">
+          <li class="cards__item cards__item--grey-fill">
             <a href="#"><img src="img/content/pro1000-buckwheat@1x.png" width="84" height="100"
                 alt="Cat Energy Slim 1000 г — гречка"></a>
             <div class="card-content">
@@ -178,10 +179,10 @@
                   <dd>700 р.</dd>
                 </div>
               </dl>
-              <a class="card-link">Заказать</a>
             </div>
+            <a class="card-link">Заказать</a>
           </li>
-          <li class="cards__item">
+          <li class="cards__item cards__item--grey-fill">
             <a href="#"><img src="img/content/pro500-rice@1x.png" width="72" height="84"
                 alt="Cat Energy Slim 500 г — рис"></a>
             <div class="card-content">
@@ -202,15 +203,13 @@
                   <dd>500 р.</dd>
                 </div>
               </dl>
-              <a class="card-link">Заказать</a>
             </div>
+            <a class="card-link">Заказать</a>
           </li>
           <li class="cards__item extra-card">
-            <div class="extra-card__content">
-              <p class="extra-card__title">Показать еще 100500 товаров</p>
+              <p class="extra-card__title extra-card__title--plus-sign">Показать еще 100500 товаров</p>
               <p class="extra-card__subtitle">На самом деле вкусов гораздо больше!</p>
               <a class="card-link card-link--extra-card">Показать все</a>
-            </div>
           </li>
         </ul>
       </div>
@@ -219,28 +218,28 @@
       <div class="additional-goods__container">
         <h2>Дополнительные товары</h2>
         <ul class="additional-goods__list">
-          <li class="additional-goods__item item-flex">
+          <li class="additional-goods__item item-grid">
             <div class="col-1">Сахарозаменитель</div>
             <div class="col-2">1 упаковка (100 г)<span>200 р.</span></div>
             <div class="col-3"><a class="additional-link">Заказать</a></div>
           </li>
-          <li class="additional-goods__item item-flex">
+          <li class="additional-goods__item item-grid">
             <div class="col-1">Питьевая вода</div>
             <div class="col-2">5 литров<span>50 р.</span></div>
             <div class="col-3"><a class="additional-link">Заказать</a></div>
           </li>
-          <li class="additional-goods__item item-flex">
+          <li class="additional-goods__item item-grid">
             <div class="col-1">Молоко</div>
             <div class="col-2">1 литр<span>100 р.</span></div>
             <div class="col-3"><a class="additional-link">Заказать</a></div>
           </li>
-          <li class="additional-goods__item item-flex">
+          <li class="additional-goods__item item-grid">
             <div class="col-1">Витамины</div>
             <div class="col-2">1 упаковка (30 г)<span>300 р.</span></div>
             <div class="col-3"><a class="additional-link">Заказать</a></div>
           </li>
         </ul>
-        <div class="additional-goods__banner banner-content">
+        <div class="additional-goods__banner">
           <p class="banner-content__text">Закажите все и получите чехол для кота в подарок!</p>
         </div>
       </div>
@@ -249,7 +248,7 @@
       <h2 class="visually-hidden">Офис нашей компании на карте</h2>
       <div class="location__container">
         <div class="location__contacts location__contacts--grey-fill">
-          <div class="location__contacts-container">
+          <div class="location__contacts-content">
             <p class="location__contacts-title">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <p class="location__contacts-text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
           </div>
