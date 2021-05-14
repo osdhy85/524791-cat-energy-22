@@ -6,6 +6,18 @@
   margin: 0 auto;
   padding: 0 20px;
   width: 280px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding: 0 110px;
+    width: 1220px;
+  }
 }
 
 .footer__list {
@@ -15,24 +27,19 @@
   padding: 20px 0 35px 0;
   margin: 0;
   list-style: none;
-}
 
-.social {
-  padding: 20px 0;
-  margin: 0 0 15px 0;
-  border-top: 1px solid @special-grey-1;
-  border-bottom: 1px solid @special-grey-1;
-}
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    min-height: 150px;
+    list-style: none;
 
-.social__list {
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 130px;
-  list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .footer__link {
@@ -53,37 +60,18 @@
   background-image: url("../../img/logos/text-logo-footer.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
-}
 
-.social__link--vkontakte {
-  display: block;
-  height: 23px;
-  width: 23px;
-  background-image: url("../../img/decorative/footer-icon-vkontakte.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.social__link--instagram {
-  display: block;
-  height: 23px;
-  width: 23px;
-  background-image: url("../../img/decorative/footer-icon-instagram.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.social__link--facebook {
-  display: block;
-  height: 23px;
-  width: 23px;
-  background-image: url("../../img/decorative/footer-icon-facebook.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 a.footer__link--academy-logo {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 44px 0 0;
+  }
 }
 
 .footer__link--academy-logo::after {
@@ -97,76 +85,11 @@ a.footer__link--academy-logo {
   background-image: url("../../img/logos/htmlacademy-logo-footer.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
-}
 
-@media (min-width: @tablet-width) {
-  .footer__container {
-    margin: 0 auto;
-    padding: 0 30px;
-    width: 708px;
-  }
-
-  .footer__list {
-    margin: 0;
-    padding: 0;
-    min-height: 150px;
-    list-style: none;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .social {
-    padding: 0;
-    margin: 0;
-    border: none;
-  }
-
-  .social__list {
-    width: 130px;
-  }
-
-  .footer__link--energy-logo {
-    margin: 0;
-  }
-
-  .social__link--vkontakte {
-    height: 30px;
-    width: 30px;
-    background-size: 30px 30px;
-  }
-
-  .social__link--instagram {
-    height: 30px;
-    width: 30px;
-    background-size: 30px 30px;
-  }
-
-  .social__link--facebook {
-    height: 30px;
-    width: 30px;
-    background-size: 30px 30px;
-  }
-
-  a.footer__link--academy-logo {
-    margin: 0 44px 0 0;
-  }
-
-  .footer__link--academy-logo::after {
+  @media (min-width: @tablet-width) {
     top: -8px;
     left: 130px;
     width: 28px;
     height: 35px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .footer__container {
-    margin: 0 auto;
-    padding: 0 110px;
-    width: 1220px;
   }
 }

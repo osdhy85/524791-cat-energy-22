@@ -1,3 +1,9 @@
+.location__container {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
 .location__container iframe {
   display: block;
   border: none;
@@ -20,31 +26,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-}
 
-.location__contacts-title {
-  margin: 0;
-  max-width: 140px;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: @basic-black-extra;
-  text-transform: uppercase;
-}
-
-.location__contacts-text {
-  margin: 0;
-  max-width: 140px;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: @special-dark-grey-1;
-}
-
-@media (min-width: @tablet-width) {
-  .location__contacts-content {
+  @media (min-width: @tablet-width) {
     margin: 0 auto;
     width: 625px;
     padding: 50px 0;
@@ -54,31 +37,7 @@
     align-items: start;
   }
 
-  .location__contacts-title {
-    max-width: 170px;
-    font-size: 20px;
-    line-height: 22px;
-  }
-
-  .location__contacts-text {
-    max-width: 170px;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: right;
-  }
-
-  .location__contacts-text span {
-    display: inline-block;
-    margin: 5px 0 0 0;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .location__container {
-    position: relative;
-  }
-
-  .location__contacts-content {
+  @media (min-width: @desktop-width) {
     content: "";
     position: absolute;
     top: 100px;
@@ -92,21 +51,62 @@
     align-items: start;
     background-color: @basic-white;
   }
+}
 
-  .location__title {
+.location__contacts-title {
+  margin: 0;
+  max-width: 140px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @basic-black-extra;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    max-width: 170px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
     max-width: 170px;
     font-size: 20px;
     line-height: 21px;
   }
+}
 
-  .location__text {
+.location__contacts-text {
+  margin: 0;
+  max-width: 140px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: @special-dark-grey-1;
+
+  @media (min-width: @tablet-width) {
     max-width: 170px;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
   }
 
-  .location__text span {
+  @media (min-width: @desktop-width) {
+    max-width: 170px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.location__contacts-text span {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin: 5px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
     display: inline-block;
     margin: 5px 0 0 0;
   }
