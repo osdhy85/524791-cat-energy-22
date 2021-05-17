@@ -40,13 +40,55 @@
 
 .main-nav--closed .main-nav__toggle:active::before {
   background-color: fade(@special-grey-1, 30%);
-  box-shadow: 0 8px 0 0 fade(@special-grey-1, 30%), 0 16px 0 0 fade(@special-grey-1, 30%);
+  box-shadow: 0 8px 0 0 fade(@special-grey-1, 30%),
+    0 16px 0 0 fade(@special-grey-1, 30%);
+}
+
+.main-nav--closed .site-list__item {
+  @media (min-width: @mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__container {
+  @media (min-width: @mobile-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: @basic-white;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @media (min-width: @mobile-width) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__container {
+  @media (min-width: @mobile-width) {
+    position: static;
+    min-height: 0;
+  }
+}
+
+.main-nav--nojs .site-list__item {
+  @media (min-width: @mobile-width) {
+    display: block;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
   top: 34px;
   left: auto;
   right: 20px;
+  z-index: 11;
 
   &::before,
   &::after {
@@ -81,7 +123,6 @@
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -132,5 +173,13 @@
     background-image: url("../../img/logos/logo-header-desktop.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }

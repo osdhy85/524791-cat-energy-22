@@ -43,12 +43,39 @@
 }
 
 .footer__link {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: @special-dark-grey-1;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__link svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer__link--academy-logo {
+  &:hover,
+  &:hover svg {
+    opacity: 1;
+    fill: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__link--energy-logo {
@@ -63,33 +90,5 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-  }
-}
-
-a.footer__link--academy-logo {
-  position: relative;
-
-  @media (min-width: @tablet-width) {
-    margin: 0 44px 0 0;
-  }
-}
-
-.footer__link--academy-logo::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -8px;
-  left: 252px;
-  width: 28px;
-  height: 35px;
-  background-image: url("../../img/logos/htmlacademy-logo-footer.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    top: -8px;
-    left: 130px;
-    width: 28px;
-    height: 35px;
   }
 }

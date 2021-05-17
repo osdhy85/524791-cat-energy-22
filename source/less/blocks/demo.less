@@ -268,6 +268,7 @@ p.demo__description-total span {
     height: 620px;
     width: 708px;
     background-image: url("../../img/content/cats-comparison-tablet@1x.png");
+    z-index: -1;
   }
 
   @media (min-width: @desktop-width) {
@@ -356,8 +357,17 @@ p.demo__description-total span {
     border: 1px solid @special-grey-1;
     border-radius: 50%;
     background-color: @basic-white;
-    box-shadow: 0 2px 2px rgba(var(--basic-black-rgba), 0.18);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      border: 1px solid @basic-green;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -421,7 +431,15 @@ p.demo__description-total span {
   @media (min-width: @tablet-width) {
     padding: 5px 0 5px 0;
     font-size: 20px;
-    border-bottom: 1px dashed @special-grey-1;
+    border-bottom: 1px dotted @special-grey-1;
+
+    &:hover {
+      border-bottom: 1px solid @special-grey-1;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
