@@ -123,9 +123,10 @@
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto;
+    justify-items: end;
     align-items: center;
 
     margin: 0 auto;
