@@ -64,6 +64,10 @@
 .footer__link svg {
   display: inline-block;
   vertical-align: middle;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 30px;
+  }
 }
 
 .footer__link--academy-logo {
@@ -75,6 +79,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @mobile-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 

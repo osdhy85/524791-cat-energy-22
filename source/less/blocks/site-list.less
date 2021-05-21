@@ -13,6 +13,7 @@
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 440px;
 
     &--bb {
       border: none;
@@ -62,10 +63,10 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 10000px;
-  left: 10000px;
+  right: 0;
+  left: 0;
   height: 1px;
-  margin: 0 -10000px;
+  margin: 0;
   background-color: @special-grey-2;
 
   @media (min-width: @tablet-width) {
@@ -108,7 +109,7 @@
     margin: 0;
     font-size: 20px;
     line-height: 30px;
-    color: @basic-white;
+    color: @basic-black;
 
     &:hover {
       color: @basic-white-rgba-6;
