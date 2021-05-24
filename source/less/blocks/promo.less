@@ -4,28 +4,42 @@
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
   }
+
+  @media (min-width: @desktop-width) {
+    height: 689px;
+  }
 }
 
 .promo__container {
   position: relative;
-  margin: 0 auto 250px auto;
+  margin: 0 auto 200px auto;
   min-height: 302px;
   width: 320px;
   background-image: url("../../img/content/index-promo-bg-mobile@1x.png");
-  background-position: 60% 0;
+  background-position: 64% 0;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/content/index-promo-bg-mobile@2x.png");
+    background-size: 563px auto;
+  }
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    height: 850px;
+    height: 856px;
     padding: 0 30px;
     margin: 0 auto;
     background-image: url("../../img/content/index-chicken-tablet@1x.png");
-    background-position: 50% 100%;
+    background-position: 47% 102%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content/index-chicken-tablet@2x.png");
+      background-size: 708px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    top: -99px;
+    top: -87px;
     left: 0;
     z-index: 0;
 
@@ -35,6 +49,11 @@
     background-size: 720px 694px;
     background-image: url("../../img/content/index-promo-bg-desktop@1x.png");
     background-position: 100% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content/index-promo-bg-desktop@2x.png");
+      background-size: 720px auto;
+    }
   }
 }
 
@@ -64,7 +83,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 0 0 87px;
-    padding: 14px 26px;
+    padding: 17px 26px;
     width: 244px;
     font-size: 20px;
     line-height: 20px;
@@ -77,7 +96,7 @@
 
 .promo__container a {
   position: relative;
-  bottom: -320px;
+  bottom: -302px;
   left: 0;
 
   @media (min-width: @tablet-width) {
@@ -87,16 +106,16 @@
 
 .promo__content {
   max-width: 280px;
-  padding: 50px 20px 0 20px;
+  padding: 28px 20px 0 20px;
 
   @media (min-width: @tablet-width) {
     max-width: 414px;
-    padding: 40px 0 0 87px;
+    padding: 47px 0 0 87px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 414px;
-    padding: 100px 0 0 80px;
+    padding: 224px 0 0 80px;
   }
 }
 
@@ -104,13 +123,18 @@
   content: "";
   position: absolute;
   display: block;
-  top: 200px;
-  left: 0;
+  top: 168px;
+  left: 20px;
   width: 280px;
   height: 270px;
   background-image: url("../../img/content/index-chicken-mobile@1x.png");
   background-position: 0 0;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/content/index-chicken-mobile@2x.png");
+    background-size: 280px auto;
+  }
 
   @media (min-width: @tablet-width) {
     content: none;
@@ -120,53 +144,63 @@
     content: "";
     position: absolute;
     display: block;
-    top: 150px;
-    left: 400px;
+    top: 141px;
+    left: 557px;
     width: 552px;
     height: 499px;
     background-image: url("../../img/content/index-chicken-desktop@1x.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content/index-chicken-desktop@2x.png");
+      background-size: 552px auto;
+    }
   }
 }
 
 .promo__content h1 {
-  margin: 0 0 20px 0;
+  margin: 0 0 24px 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: @basic-white;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
+    margin: 0 0 42px 0;
     font-size: 60px;
     line-height: 60px;
     color: @basic-black;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
   }
 }
 
 .promo__content p {
-  margin: 0 0 0 0;
+  margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: @basic-white;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 50px 0;
+    margin: 0 0 48px 0;
     font-size: 20px;
     line-height: 20px;
     color: @basic-black;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 50px 0;
+    margin: 0 0 52px 0;
   }
 }

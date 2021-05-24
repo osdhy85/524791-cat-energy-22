@@ -1,0 +1,241 @@
+.item-grid {
+  padding: 10px 0 0 0;
+  margin: 0 0 21px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  justify-content: start;
+  row-gap: 14px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 1px;
+    width: 280px;
+    background-color: @special-grey-2;
+    transform: translateY(-3px);
+  }
+
+  &.item-grid:last-child {
+    margin: 0 0 57px 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      height: 1px;
+      width: 280px;
+      background-color: @special-grey-2;
+      transform: translateY(125px);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 0 0 55px 0;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    justify-content: start;
+    align-items: baseline;
+    row-gap: 0;
+    width: 632px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -28px;
+      left: 50%;
+      height: 1px;
+      width: 708px;
+      background-color: @special-grey-2;
+      transform: translateX(-50%);
+    }
+
+    &.item-grid:last-child {
+      margin: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 896px;
+    padding: 0;
+    margin: 17px 0 32px 0;
+    grid-template-columns: 1fr 1fr 244px;
+    grid-template-rows: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      height: 1px;
+      width: 895px;
+      background-color: @special-grey-2;
+      transform: translateY(-17px);
+    }
+
+    &::after {
+      content: none;
+    }
+
+    &.item-grid:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        height: 1px;
+        width: 895px;
+        background-color: @special-grey-2;
+        transform: translateY(-12px);
+      }
+    }
+  }
+}
+
+.item-grid__col-1 {
+  @media (min-width: @tablet-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.item-grid__col-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.item-grid__col-2 span:first-child {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    display: block;
+    top: 3px;
+    right: 94px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: unset;
+    display: inline-block;
+    vertical-align: baseline;
+  }
+}
+
+.item-grid__col-3 {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+}
+
+.item-grid div:nth-child(1) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @special-dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.item-grid div:nth-child(2),
+.item-grid div:nth-child(3) {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: @special-dark-grey-1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.item-grid div:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin: 20px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.item-grid__price {
+  text-transform: uppercase;
+  align-self: flex-end;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 42px 0 0;
+  }
+}
+
+.item-grid__additional-link {
+  display: block;
+  width: 280px;
+  padding: 10px 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: @basic-white;
+  background-color: @basic-green;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 0 0;
+  }
+}

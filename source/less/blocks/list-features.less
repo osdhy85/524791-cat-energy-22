@@ -36,23 +36,57 @@
   padding: 0;
 }
 
+.form__fieldset:nth-child(1) {
+  @media (min-width: @tablet-width) {
+    margin: 0 0 49px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 45px 0;
+  }
+}
+
+.form__fieldset:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin: 0 0 41px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 44px 0;
+  }
+}
+
+.form__fieldset:nth-child(4) {
+  margin: 0 0 16px 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 57px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 59px 0;
+  }
+}
+
+.form__fieldset:nth-child(5) {
+  margin: 0 0 18px 0;
+}
+
 .form__fieldset legend {
-  padding: 0;
-  margin: 0 0 20px 0;
+  position: relative;
+  left: -40px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @basic-black;
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    position: relative;
     left: -40px;
-    margin: 0 0 30px 0;
-    padding: 0 40px;
+    margin: 0 0 75px 0;
     font-size: 36px;
     line-height: 36px;
-    background-color: @basic-white;
   }
 
   @media (min-width: @desktop-width) {
@@ -60,19 +94,92 @@
   }
 }
 
-fieldset.form__fieldset:nth-child(3)::before,
-fieldset.form__fieldset:nth-child(4)::before,
-fieldset.form__fieldset:nth-child(5)::before {
+fieldset:nth-child(3) legend {
+  margin: 0 0 37px 0;
+  padding: 0 15px 0 40px;
+  max-width: 190px;
+
   @media (min-width: @tablet-width) {
-    content: "";
-    display: block;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    background-color: @basic-green;
-    transform: translateY(-43px);
-    z-index: -1;
+    margin: 0 0 76px 0;
+    padding: 0 40px;
+    max-width: 513px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 75px 0;
+  }
+}
+
+fieldset.form__fieldset:nth-child(3)::before {
+  content: "";
+  display: block;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: @basic-green;
+  transform: translateY(-71px);
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(-90px);
+  }
+}
+
+
+fieldset:nth-child(4) legend {
+  margin: 0 0 38px 0;
+  padding: 0 21px 0 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 76px 0;
+    padding: 0 40px;
+  }
+}
+
+fieldset.form__fieldset:nth-child(4)::before {
+  content: "";
+  display: block;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: @basic-green;
+  transform: translateY(-49px);
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(-90px);
+  }
+}
+
+fieldset:nth-child(5) legend {
+  margin: 0 0 35px 0;
+  padding: 0 21px 0 40px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 61px 0;
+    padding: 0 40px;
+  }
+}
+
+fieldset.form__fieldset:nth-child(5)::before {
+  content: "";
+  display: block;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background-color: @basic-green;
+  transform: translateY(-46px);
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    transform: translateY(-76px);
+  }
+
+  @media (min-width: @desktop-width) {
+    transform: translateY(-74px);
   }
 }
 
@@ -97,12 +204,13 @@ fieldset.form__fieldset:nth-child(5)::before {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 14px 0;
 
   position: relative;
 
   @media (min-width: @tablet-width) {
     max-width: 630px;
+    margin: 0 0 20px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -110,10 +218,32 @@ fieldset.form__fieldset:nth-child(5)::before {
   }
 }
 
-.list-features label,
+.list-features__item:last-child {
+  margin: 0 0 24px 0;
+}
+
+.list-contacts__item:last-child {
+  margin: 0 0 24px 0;
+}
+
+.list-features label {
+  margin: 0 15px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 18px 0 0;
+  }
+}
+
 .list-contacts label {
-  flex-basis: content;
-  margin: 0 14px 0 0;
+  margin: 0 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 15px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 20px 0 0;
+  }
 }
 
 .list-features input,
@@ -147,8 +277,8 @@ fieldset.form__fieldset:nth-child(5)::before {
 }
 
 .list-radio {
-  padding: 30px 0;
-  margin: 0 0 30px 0;
+  padding: 30px 0 18px 0;
+  margin: 0 0 27px 0;
   box-sizing: border-box;
 
   @media (min-width: @mobile-width) {
@@ -159,7 +289,7 @@ fieldset.form__fieldset:nth-child(5)::before {
       left: 0;
       height: 1px;
       width: 100%;
-      background-color: @special-grey-1;
+      background-color: @special-grey-2;
       transform: translateY(-30px);
     }
 
@@ -170,15 +300,16 @@ fieldset.form__fieldset:nth-child(5)::before {
       left: 0;
       height: 1px;
       width: 100%;
-      background-color: @special-grey-1;
-      transform: translateY(30px);
+      background-color: @special-grey-2;
+      transform: translateY(18px);
     }
   }
 
   @media (min-width: @tablet-width) {
-    padding: 30px 0 30px 27px;
+    padding: 30px 0 28px 27px;
+    margin: 0 0 76px 0;
     max-width: 630px;
-    border: 1px solid @special-grey-1;
+    border: 1px solid @special-grey-2;
 
     &::before,
     &::after {
@@ -192,10 +323,14 @@ fieldset.form__fieldset:nth-child(5)::before {
 }
 
 .list-radio__item {
-  margin: 0 0 20px 0;
+  margin: 0 0 18px 0;
 
   &.list-radio__item:last-child {
     margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 21px 0;
   }
 }
 
@@ -216,7 +351,7 @@ fieldset.form__fieldset:nth-child(5)::before {
 
 .input-radio + label {
   position: relative;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 46px;
   cursor: pointer;
 }
 
@@ -226,22 +361,36 @@ fieldset.form__fieldset:nth-child(5)::before {
   position: absolute;
   top: -6px;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 29px;
+  height: 29px;
   border: 1px solid @special-grey-2;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: -8px;
+    left: -1px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .input-radio:checked + label::after {
   content: "";
   position: absolute;
   display: block;
-  top: 6px;
-  left: 12px;
-  width: 18px;
-  height: 18px;
+  top: 3px;
+  left: 9px;
+  width: 13px;
+  height: 13px;
   background-color: @basic-green-2;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 4px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .input-radio:not(:checked):hover + label::before,
@@ -262,7 +411,7 @@ fieldset.form__fieldset:nth-child(5)::before {
 .list-features input,
 .list-contacts input,
 .form-commentary textarea {
-  border: 1px solid @special-grey-2;
+  border: 1px solid @special-grey-1;
   box-sizing: border-box;
 
   &:hover {
@@ -340,7 +489,7 @@ input[name="telephone"]:invalid + svg {
   width: 100%;
   resize: none;
   overflow: hidden;
-  padding: 15px 10px;
+  padding: 8px 13px;
 
   @media (min-width: @tablet-width) {
     padding: 10px 20px;
@@ -368,7 +517,7 @@ input[name="telephone"]:invalid + svg {
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 50px 0;
+    margin: 0 0 7px 0;
     display: grid;
     grid-template-columns: repeat(4, 221px);
     grid-template-rows: auto;
@@ -376,39 +525,50 @@ input[name="telephone"]:invalid + svg {
   }
 }
 
+.list-addtional li {
+  margin: 0 0 19px 0;
+}
+
 .list-addtional li:nth-child(1),
 .list-addtional li:nth-child(2) {
   @media (min-width: @tablet-width) {
-    margin: 0 0 30px 0;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    margin: 0 0 41px 0;
   }
 }
 
 .list-addtional li:nth-child(3),
 .list-addtional li:nth-child(4) {
   @media (min-width: @tablet-width) {
-    margin: 0 0 30px 0;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    margin: 0 0 40px 0;
   }
 }
 
 .input-checkbox + label {
   position: relative;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 46px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 59px;
+  }
 }
 
 .input-checkbox:not(:checked) + label::before,
 .input-checkbox:checked + label::before {
   content: "";
   position: absolute;
-  top: -6px;
+  top: 1px;
   left: 0;
-  width: 40px;
-  height: 40px;
-  border: 1px solid @special-grey-2;
+  width: 28px;
+  height: 28px;
+  border: 1px solid @special-grey-1;
+
+  @media (min-width: @tablet-width) {
+    top: -6px;
+    left: -2px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .input-checkbox:checked + label::after {
@@ -416,12 +576,17 @@ input[name="telephone"]:invalid + svg {
   position: absolute;
   display: block;
   top: 8px;
-  left: 12px;
+  left: 6px;
   width: 18px;
   height: 14px;
   background-image: url("../../img/decorative/checkmark.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    left: 10px;
+  }
 }
 
 .input-checkbox:not(:checked):hover + label::before,
@@ -448,14 +613,14 @@ input[name="telephone"]:invalid + svg {
 
 .form__button-container {
   @media (min-width: @tablet-width) {
-    margin: 0 0 50px 0;
+    margin: 0 0 72px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 50px 0;
+    margin: 0 0 82px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -492,17 +657,25 @@ input[name="telephone"]:invalid + svg {
     padding: 16px 20px;
     font-size: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    padding: 16px 20px;
+    font-size: 20px;
+  }
 }
 
 .form-footnote {
+  margin: 20px 0 33px 0;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: @basic-black;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 0 80px;
+    margin: 0 0 0 62px;
     font-size: 16px;
     line-height: 16px;
   }
