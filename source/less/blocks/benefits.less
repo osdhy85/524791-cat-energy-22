@@ -15,7 +15,7 @@
 }
 
 .benefits__container h2 {
-  margin: 0 0 30px 0;
+  margin: 0 0 41px 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -23,13 +23,13 @@
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 40px 0;
+    margin: 0 0 71px 0;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 50px 0;
+    margin: 0 0 72px 0;
   }
 }
 
@@ -43,19 +43,26 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     justify-items: start;
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 59px;
+    row-gap: 55px;
+    margin: 0 0 51px 0;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    grid-column-gap: 67px;
+    grid-column-gap: 75px;
+    margin: 0;
   }
 }
 
 .benefits__item {
   position: relative;
+  margin: 0 0 26px 0;
+
+  &.benefits__item:last-child {
+    margin: 0 0 45px 0;
+  }
 
   @media (min-width: @tablet-width) {
     width: 250px;
@@ -64,12 +71,11 @@
 
   @media (min-width: @desktop-width) {
     width: 250px;
-    min-height: 280px;
+    min-height: 264px;
   }
 }
 
 .benefits__item p {
-  margin: 30px 0 30px 0;
   padding: 0 0 0 80px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
@@ -79,7 +85,7 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 100px 0 0 0;
+    padding: 113px 0 0 0;
     font-size: 16px;
     line-height: 24px;
   }
@@ -158,7 +164,7 @@
   height: 60px;
   background-size: 85px 85px;
   background-image: url("../../img/decorative/benefits-icon-period.svg");
-  background-position: 45% 30%;
+  background-position: 45% 45%;
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
@@ -169,16 +175,22 @@
   }
 }
 
+.benefits__item--period p {
+  @media (min-width: @tablet-width) {
+    max-width: 245px;
+  }
+}
+
 .benefits__list li:nth-child(1) {
   @media (min-width: @tablet-width) {
     background-size: 70px 228px;
     background-image: url("../../img/decorative/number-1.svg");
-    background-position: 80% 0;
+    background-position: 70% 0;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 80% 0;
+    background-position: 72% 0;
   }
 }
 
@@ -186,12 +198,12 @@
   @media (min-width: @tablet-width) {
     background-size: 113px 229px;
     background-image: url("../../img/decorative/number-2.svg");
-    background-position: 80% 0;
+    background-position: 90% 0;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 80% 0;
+    background-position: 90% 0;
   }
 }
 
@@ -199,12 +211,12 @@
   @media (min-width: @tablet-width) {
     background-size: 113px 229px;
     background-image: url("../../img/decorative/number-3.svg");
-    background-position: 80% 0;
+    background-position: 90% 0;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 80% 0;
+    background-position: 90% 0;
   }
 }
 
@@ -212,11 +224,11 @@
   @media (min-width: @tablet-width) {
     background-size: 113px 229px;
     background-image: url("../../img/decorative/number-4.svg");
-    background-position: 80% 0;
+    background-position: 93% -10px;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 80% 0;
+    background-position: 95% 0;
   }
 }

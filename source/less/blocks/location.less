@@ -9,6 +9,10 @@
   border: none;
   height: 362px;
   background-color: @special-grey-2;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }
 
 .location__contacts {
@@ -22,7 +26,7 @@
 .location__contacts-content {
   margin: 0 auto;
   width: 280px;
-  padding: 20px 20px 20px 20px;
+  padding: 26px 20px 28px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -30,7 +34,7 @@
   @media (min-width: @tablet-width) {
     margin: 0 auto;
     width: 625px;
-    padding: 50px 0;
+    padding: 67px 0 56px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -40,11 +44,11 @@
   @media (min-width: @desktop-width) {
     content: "";
     position: absolute;
-    top: 100px;
-    left: 175px;
+    top: 95px;
+    left: 110px;
 
-    max-width: 405px;
-    padding: 50px 90px 50px 75px;
+    width: 421px;
+    padding: 67px 74px 58px 75px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,13 +70,12 @@
   @media (min-width: @tablet-width) {
     max-width: 170px;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 170px;
     font-size: 20px;
-    line-height: 21px;
   }
 }
 
@@ -95,19 +98,19 @@
   @media (min-width: @desktop-width) {
     max-width: 170px;
     font-size: 16px;
-    line-height: 20px;
-    text-align: right;
+    line-height: 18px;
+    text-align: left;
   }
 }
 
 .location__contacts-text span {
   @media (min-width: @tablet-width) {
     display: inline-block;
-    margin: 5px 0 0 0;
+    margin: 18px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
     display: inline-block;
-    margin: 5px 0 0 0;
+    margin: 20px 0 0 0;
   }
 }
