@@ -43,7 +43,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 0;
+    bottom: 56px;
     left: 0;
     width: 100%;
     min-height: 462px;
@@ -301,15 +301,16 @@ p.demo__description-total span {
 
   @media (min-width: @desktop-width) {
     position: relative;
-    top: -58px;
-    left: 1px;
-    width: 640px;
-    height: 536px;
+    top: -57px;
+    left: 40px;
+    width: 690px;
+    height: 656px;
     background-image: url("../../img/content/cats-comparison-desktop@1x.png");
+    background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/content/cats-comparison-desktop@2x.png");
-      background-size: 640px auto;
+      background-size: 690px auto;
     }
   }
 }
@@ -322,6 +323,7 @@ p.demo__description-total span {
 
 .demo__slider {
   margin: 0 0 23px 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -332,19 +334,21 @@ p.demo__description-total span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 216px;
+  width: 216px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     position: relative;
     top: 14px;
     left: 0;
-    max-width: 570px;
+    width: 570px;
   }
 
   @media (min-width: @desktop-width) {
-    top: -38px;
-    left: 39px;
+    position: absolute;
+    top: -157px;
+    left: 121px;
+    width: 570px;
   }
 }
 
@@ -365,7 +369,6 @@ p.demo__description-total span {
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
     height: 6px;
     border-radius: 6px;
     background-color: @special-grey-1;
