@@ -7,6 +7,7 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
+const terser = require("gulp-terser");
 const del = require("del");
 const sync = require("browser-sync").create();
 
@@ -19,9 +20,7 @@ const styles = () => {
     .pipe(less())
     .pipe(postcss([
       autoprefixer(),
-      csso()
     ]))
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -51,29 +50,26 @@ const scripts = () => {
 
 // Copy
 
-// const copy = (done) => {
-//   gulp.src([
-//     "source/fonts/*.{woff2,woff}",
-//     "source/img/fvicon/*.ico",
-//     "source/img/**/*.svg",
-//     "!source/img/icons/*.svg",
-//   ], {
-//     base: "source"
-//   })
-//     .pipe(gulp.dest("build"))
-//   done();
-// }
+const copy = (done) => {
+  gulp.src([
+    "source/fonts/*.{woff2,woff}",
+    "source/img/favicon/*.ico",
+    "source/img/**/*.{jpg,png,svg}",
+    "!source/img/icons/*.svg",
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+  done();
+}
 
-// exports.copy = copy;
+exports.copy = copy;
 
 // Clean
 
 const clean = () => {
   return del("build");
 };
-
-
-exports.sprite = sprite;
 
 // Server
 
@@ -98,31 +94,27 @@ const reload = (done) => {
   done();
 }
 
-
 // Watcher
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/js/script.js", gulp.series("scripts"));
+  gulp.watch("source/*.html").on("change", reload);
 }
 
-exports.default = gulp.series(
-  styles, server, watcher
-);
-
 // Build
-
-// const build = gulp.series(styles);
 
 const build = gulp.series(
   clean,
   copy,
   gulp.parallel(
     styles,
-    html,
-    scripts
+    html
   ),
 );
 
 exports.build = build;
+
+exports.default = gulp.series(
+  build, server, watcher
+);
