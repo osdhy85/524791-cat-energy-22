@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "del": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-terser": "^2.0.1",
     "postcss-csso": "^5.0.1"
   }

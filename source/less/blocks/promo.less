@@ -8,6 +8,14 @@
   @media (min-width: @desktop-width) {
     height: 689px;
     position: relative;
+    background-image: url("../../img/content/index-promo-bg-desktop@1x.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/content/index-promo-bg-desktop@2x.png");
+    }
 
     &::after {
       content: "";
@@ -52,21 +60,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -87px;
+    top: 0;
     left: 0;
     z-index: 0;
 
     width: 1220px;
     padding: 0 110px;
     height: 694px;
-    background-size: 720px 694px;
-    background-image: url("../../img/content/index-promo-bg-desktop@1x.png");
-    background-position: 100% 0;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/content/index-promo-bg-desktop@2x.png");
-      background-size: 720px auto;
-    }
+    background-image: none;
   }
 }
 

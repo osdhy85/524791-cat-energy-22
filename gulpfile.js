@@ -3,11 +3,12 @@ const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
-const rename = require("gulp-rename");
-const htmlmin = require("gulp-htmlmin");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
+const imagemin = require("gulp-imagemin");
 const del = require("del");
 const sync = require("browser-sync").create();
 
@@ -19,10 +20,11 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer(),
+      autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
+    .pipe(rename("style.css"))
     .pipe(gulp.dest("build/css"))
+    .pipe(less())
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -43,8 +45,6 @@ const html = () => {
     .pipe(gulp.dest("build"));
 }
 
-exports.html = html;
-
 // Scripts
 
 const scripts = () => {
@@ -55,13 +55,36 @@ const scripts = () => {
     .pipe(sync.stream());
 }
 
+exports.scripts = scripts;
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.images = optimizeImages;
+
+const copyImages = () => {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.images = copyImages;
+
 // Copy
 
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/img/favicon/*.ico",
-    "source/img/**/*.{jpg,png,svg}",
+    "source/*.ico",
+    "source/img/**/*.svg",
     "!source/img/icons/*.svg",
   ], {
     base: "source"
@@ -83,7 +106,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -104,9 +127,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
@@ -114,14 +137,29 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   copy,
+  optimizeImages,
   gulp.parallel(
     styles,
-    html
+    html,
+    scripts
   ),
 );
 
 exports.build = build;
 
+// Default
+
+
 exports.default = gulp.series(
-  build, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
