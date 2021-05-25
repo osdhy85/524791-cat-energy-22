@@ -6,7 +6,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 689px;
+    min-height: 694px;
+    margin: 0 0 82px 0;
     position: relative;
     background-image: url("../../img/content/index-promo-bg-desktop@1x.png");
     background-size: 50%;
@@ -15,18 +16,6 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/content/index-promo-bg-desktop@2x.png");
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -87px;
-      left: 0;
-      min-height: 694px;
-      width: 100%;
-      background-color: @basic-green-2;
-      // transform: translateY(-30px);
-      z-index: -4;
     }
   }
 }
@@ -116,6 +105,10 @@
   @media (min-width: @tablet-width) {
     top: 0;
     left: -5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
   }
 }
 
